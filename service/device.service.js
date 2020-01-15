@@ -61,6 +61,7 @@ const DeviceService = {
                     resovle(data);
                 })
                 .catch((e) => {
+                    console.log(e);
                     reject(e);
                 });
         });
