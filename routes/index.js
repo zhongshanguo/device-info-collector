@@ -6,7 +6,7 @@ const service = require('../service/device.service');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.sendfile('views/index.html');
 });
 
 router.post('/device/collect', function(req,res,next){

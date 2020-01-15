@@ -1,0 +1,12 @@
+{
+    "app_options": {
+        "listen_port": 30002
+    },
+    "db_options": {
+        "host": "127.0.0.1",
+        "user": "device_info_user",
+        "password": "device_info_password",
+        "database": "device_info",
+        "port": 3306
+    }
+}

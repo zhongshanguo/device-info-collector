@@ -1,9 +1,35 @@
 const dao = require('../dao/db');
 
 const DeviceService = {
-    save: (deviceInfo) => {
+    save: (device_info) => {
         return new Promise((resovle, reject) => {
-            let sql = `insert into device_info (app_id, user_id,device_id,device_type,is_physical_device,ios_name,ios_system_name,ios_system_version,ios_model,ios_localized_model,android_version,android_board,android_bootloader,android_brand,android_device,android_display,android_fingerprint,android_hardware,android_host,android_id,android_manufacturer,android_model,android_product,android_tags,android_type,collect_time) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,now());`;
+            let sql = `insert into login_info (
+                app_id, 
+                user_id,
+                device_id,
+                device_type,
+                is_physical_device,
+                ios_name,
+                ios_system_name,
+                ios_system_version,
+                ios_model,
+                ios_localized_model,
+                android_version,
+                android_board,
+                android_bootloader,
+                android_brand,
+                android_device,
+                android_display,
+                android_fingerprint,
+                android_hardware,
+                android_host,
+                android_id,
+                android_manufacturer,
+                android_model,
+                android_product,
+                android_tags,
+                android_type,
+                collect_time) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,now());`;
             dao.execute(sql, [
                 device_info.app_id,
                 device_info.user_id,
@@ -29,8 +55,7 @@ const DeviceService = {
                 device_info.android_model,
                 device_info.android_product,
                 device_info.android_tags,
-                device_info.android_type,
-                now(),
+                device_info.android_type
             ])
                 .then((data) => {
                     resovle(data);

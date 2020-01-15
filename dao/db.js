@@ -1,12 +1,13 @@
 const mysql = require('mysql');
+const options = require('../config');
 
 const readWriteConfig = {
     connectionLimit: 3,
-    host: '127.0.0.1',
-    user: "device_info_user",
-    password: "device_info_password",
-    port: 3306,
-    database: 'device_info',
+    host: options.db_options.host,
+    user: options.db_options.user,
+    password: options.db_options.password,
+    port: options.db_options.port,
+    database: options.db_options.database,
     multipleStatements: true,
     charset: 'UTF8MB4_GENERAL_CI'
 };
