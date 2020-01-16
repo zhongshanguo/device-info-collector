@@ -6,6 +6,10 @@
 ## Getting Started
 
 - NodeJs环境略
+
+- 准备数据库
+    使用 device_info数据库，建立login_info数据表。建立表的文件: devince_info.sql
+
 - 配置
     修改config.json中对应的项
         app_options.listen_port: Api接口使用的端口号
